@@ -20,8 +20,7 @@ export const userRegistrationSchema = z.object({
   phone: phoneSchema,
 
   password: z.string()
-    .min(8, 'Password must be at least 8 characters')
-    .regex(PASSWORD_REGEX, 'Password must contain at least one uppercase letter, one lowercase letter, and one digit'),
+    .min(4, 'Password must be at least 4 characters'),
 });
 
 /**

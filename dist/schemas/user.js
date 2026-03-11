@@ -1,6 +1,5 @@
 import { z } from 'zod';
 import { phoneSchema } from './phone.js';
-import { PASSWORD_REGEX } from '../constants/regex.js';
 import { UserRoles } from '../enums/roles.js';
 /**
  * User registration validation schema
@@ -16,8 +15,7 @@ export const userRegistrationSchema = z.object({
         .max(50, 'Father name must not exceed 50 characters'),
     phone: phoneSchema,
     password: z.string()
-        .min(8, 'Password must be at least 8 characters')
-        .regex(PASSWORD_REGEX, 'Password must contain at least one uppercase letter, one lowercase letter, and one digit'),
+        .min(4, 'Password must be at least 4 characters'),
 });
 /**
  * User login validation schema

@@ -14,8 +14,7 @@
   "scripts": {
     "build": "tsc",
     "dev": "tsc --watch",
-    "prepare": "npm run build",
-    "prepublishOnly": "npm run build"
+"prepublishOnly": "npm run build"
   },
   "keywords": ["validation", "zod", "queue", "typescript"],
   "author": "",
